@@ -7,7 +7,7 @@ type Props = {
   props: BlogPosts
 }
 
-export default async function Post({ props }: Props) {
+const Post = async ({ props }: Props) => {
 const blogData: BlogPosts[] = await getBlogPosts()
   return (
     <section className='w-full bg-[#f1f6f9]'>
@@ -32,3 +32,4 @@ const blogData: BlogPosts[] = await getBlogPosts()
 
   )
 }
+export default Post

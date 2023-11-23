@@ -13,7 +13,7 @@ export default function Blog({ props }: Props) {
       <Link href={"/posts/" + props.slug.current} className='flex items-center border-2 border-violet-400 hover:scale-105 duration-500 space-x-4 bg-violet-100 rounded-lg shadow-lg shadow-accent/75 p-3'>
         <div className='w-[40%]'>
 
-          <Image src={props.mainImage} alt='bloging' height={200} width={200} className='w-full object-cover rounded-lg' />
+          <Image src={props.mainImage} alt='bloging' height={200} width={200} className='w-full h-full object-cover rounded-lg' />
         </div>
         <div className='w-[60%] flex flex-col items-start'>
           <h1 className='font-bold text-xl'></h1>
