@@ -12,6 +12,7 @@ export async function getProfile() {
     const data = await client.fetch(groq`*[_type == "profile"][0]{
         ...,
         'image': image.asset->url,
+        'secondImage': secondImage.asset->url,
         'socials': socials[]->,
         }`);
     return data;
@@ -19,7 +20,7 @@ export async function getProfile() {
 export async function getAbout() {
     const data = await client.fetch(groq`*[_type == "profile"][0]{
         bio,
-        'secondImage': secondImage.asset->url
+        'secondImage': secondimage.asset->url
         }`);
     return data;
 }

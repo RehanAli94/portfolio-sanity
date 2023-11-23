@@ -19,7 +19,7 @@ export default async function Home() {
         <Navbar props={socialData} />
         <Header />
         <Devider />
-        <About props={socialData} secondImage={''}/>
+        <About  />
         <Devider />
         <Skills props={socialData} />
         <Devider />

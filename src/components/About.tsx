@@ -11,7 +11,7 @@ import { Social } from '../types/Social';
 
 type Props = {}
 export default async function About( props:Props) {
-    const aboutData: Props = await getAbout()
+    const aboutData: Profile = await getAbout()
     const profileData: Profile = await getProfile()
     return (
         <section className='max-w-7xl snap-center h-screen mx-auto flex flex-col items-center space-y-24 justify-center'>
@@ -33,7 +33,7 @@ export default async function About( props:Props) {
                     <div className='w-[200px] md:w-auo'>
                         <div className='flex items-center justify-center shadow-2xl shadow-violet-400 rounded-lg bg-white h-[250px] p-2 w-full my-12'>
                             <div className='w-full h-full rounded-lg bg-accent hover:scale-150 duration-500'>
-                                <Image src="/profile2.png" alt='' className='rounded-lg w-full scale-100 h-full mb-16 object-cover ' width={200} height={200} />
+                            <Image src={aboutData.secondImage} alt='Mian Picture' className='rounded-lg w-full scale-100 h-full mb-16 object-cover ' width={150} height={150} />
                             </div>
                         </div>
                     </div>
